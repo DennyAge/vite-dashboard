@@ -1,3 +1,4 @@
+//core
 import { motion } from 'framer-motion';
 
 const StatCard = ( { name, icon: Icon, value, color } ) => {
