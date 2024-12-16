@@ -9,7 +9,7 @@ import CategoryDistributionChart from '../components/overview/CategoryDistributi
 import SalesTrendChart from '../components/products/SalesTrendChart';
 import ProductsTable from '../components/products/ProductsTable';
 
-const PRODUCTS_DATA = [
+const productsData = [
   { name: 'Total Products', icon: Package,  value: 1234, color: '#6366F1' },
   { name: 'Top Selling', icon: TrendingUp, value: 89, color: '#10B981' },
   { name: 'Low Stock', icon: AlertTriangle, value: 23, color: '#F59E0B' },
@@ -19,7 +19,7 @@ const PRODUCTS_DATA = [
 const ProductsPage = () => {
   return (
     <div className='flex-1 overflow-auto relative z-10'>
-      <Header title='Products' />
+      <Header title='Products Page' />
 
       <main className='max-w-7xl mx-auto py-6 px-4 lg:px-8'>
         <motion.div
@@ -28,7 +28,7 @@ const ProductsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          {PRODUCTS_DATA.map( ( item ) => (
+          {productsData.map( ( item ) => (
             <StatCard key={item.name} name={item.name} icon={item.icon} value={item.value} color={item.color} />
           ) )}
         </motion.div>

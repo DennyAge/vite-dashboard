@@ -10,7 +10,7 @@ const PRODUCT_DATA = [
   { id: 4, name: 'Yoga Mat', category: 'Fitness', price: 29.99, stock: 210, sales: 950 },
   { id: 5, name: 'Coffee Maker', category: 'Home', price: 79.99, stock: 78, sales: 720 },
 ];
-const TABLE_HEADERS = [
+const productsTableHeader = [
   { name: 'Name', key: 'name' },
   { name: 'Category', key: 'category' },
   { name: 'Price', key: 'price' },
@@ -58,7 +58,7 @@ const ProductsTable = () => {
         <table className='min-w-full divide-y divide-gray-700'>
           <thead>
             <tr>
-              {TABLE_HEADERS.map( ( item ) => (
+              {productsTableHeader.map( ( item ) => (
                 <th  key={item.key} className='px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider'>
                   {item.name}
                 </th>
