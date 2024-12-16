@@ -1,10 +1,12 @@
 //core
 import { Routes, Route } from 'react-router-dom';
 //components
+import Sidebar from './components/common/Sidebar.jsx';
+//pages
 import OverviewPage from './pages/OverviewPage.jsx';
 import ProductsPage from './pages/ProductsPage.jsx';
-import Sidebar from './components/common/Sidebar.jsx';
 import UsersPage from './pages/UsersPage.jsx';
+import SalesPage from './pages/SalesPage.jsx';
 
 function App() {
   return ( 
@@ -18,6 +20,7 @@ function App() {
         <Route path="/" element={<OverviewPage/>} />
         <Route path="/products" element={<ProductsPage/>} />
         <Route path="/users" element={<UsersPage/>} />
+        <Route path="/sales" element={<SalesPage/>} />
       </Routes>
     </div>
   );
